@@ -1,0 +1,53 @@
+name: Bug Report
+description: Báo lỗi phát sinh trong quá trình phát triển hoặc kiểm thử (QA/UAT)
+title: "[BUG]: <Mô tả ngắn gọn lỗi>"
+labels: ["bug"]
+body:
+    - type: input
+      id: related-us
+      attributes:
+          label: User Story liên quan
+          placeholder: "Ví dụ: US-09 (#9)"
+      validations:
+          required: true
+
+    - type: dropdown
+      id: component
+      attributes:
+          label: Thành phần bị lỗi
+          options:
+              - Backend (C++)
+              - UI / Tích hợp
+              - CSDL (PostgreSQL)
+              - Khác
+      validations:
+          required: true
+
+    - type: textarea
+      id: steps
+      attributes:
+          label: Các bước tái hiện lỗi (Steps to Reproduce)
+          placeholder: |
+              1. Đăng nhập bằng tài khoản Thủ quỹ
+              2. Mở màn hình Lập thông báo phí tháng 10/2026
+              3. Bấm Lập thông báo -> Lỗi xảy ra
+      validations:
+          required: true
+
+    - type: textarea
+      id: expected-actual
+      attributes:
+          label: Kết quả mong đợi vs. Thực tế
+          placeholder: |
+              - Mong đợi: Tính đúng 75m2 x 6.000đ = 450.000đ
+              - Thực tế: Hiển thị 0đ hoặc crash ứng dụng
+      validations:
+          required: true
+
+    - type: textarea
+      id: logs
+      attributes:
+          label: Log lỗi / Ảnh chụp màn hình (nếu có)
+          placeholder: Dán stack trace, lỗi SQL hoặc kéo thả ảnh vào đây
+      validations:
+          required: false

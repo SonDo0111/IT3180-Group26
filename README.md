@@ -15,7 +15,7 @@
 
 The repository is structured following a modular, layered architectural pattern:
 
-```
+```text
 IT3180-Group26/
 |-- CMakeLists.txt        # Top-level CMake build configuration
 |-- CMakePresets.json     # Standardized build presets (Debug, Release, Test)

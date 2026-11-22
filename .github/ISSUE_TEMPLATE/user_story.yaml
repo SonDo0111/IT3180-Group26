@@ -1,0 +1,41 @@
+name: User Story
+description: Tạo User Story mới (bổ sung hoặc phát sinh thêm)
+title: "[US-XX]: <Tên chức năng>"
+labels: ["user-story"]
+body:
+    - type: textarea
+      id: story
+      attributes:
+          label: User Story
+          placeholder: "As a [BQT / Thủ quỹ], I want to [hành động] so that [giá trị]."
+      validations:
+          required: true
+
+    - type: textarea
+      id: gherkin
+      attributes:
+          label: Acceptance Criteria (Gherkin)
+          render: gherkin
+          placeholder: |
+              Scenario 1:
+                Given ...
+                When ...
+                Then ...
+      validations:
+          required: true
+
+    - type: input
+      id: deps
+      attributes:
+          label: Dependencies (Phụ thuộc)
+          placeholder: "Ví dụ: #3 (US-03), #7 (US-07) hoặc Không"
+      validations:
+          required: false
+
+    - type: input
+      id: risk
+      attributes:
+          label: Ghi chú / Rủi ro liên quan
+          placeholder: "Ví dụ: R-02 (Sai công thức tính phí)"
+      validations:
+          required: false
