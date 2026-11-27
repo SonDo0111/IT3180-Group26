@@ -26,7 +26,7 @@ CREATE TABLE accounts (
         CHECK (status <> 'LOCKED' OR locked_until IS NOT NULL)
 );
 
--- Đảm bảo username duy nhất KHÔNG phân biệt chữ hoa/thường (BR-01)
+-- Đảm bảo username duy nhất KHÔNG phân biệt chữ hoa/thường 
 CREATE UNIQUE INDEX uq_accounts_username_lower
     ON accounts (LOWER(username));
 
